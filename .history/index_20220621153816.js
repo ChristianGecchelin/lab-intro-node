@@ -9,7 +9,6 @@ class SortedList {
     this.items.sort(function (a, b) {
       return a - b;
     });
-    this.length = this.items.length;
   }
 
   get(pos) {
@@ -51,19 +50,7 @@ class SortedList {
     return sum;
   }
 
-  avg() {
-    if (this.items.length === 0) {
-      throw new Error("EmptySortedList");
-    } else {
-      let sum = 0;
-      let average;
-      for (let i = 0; i < this.items.length; i++) {
-        const element = this.items[i];
-        sum += element;
-      }
-      return (average = sum / this.items.length);
-    }
-  }
+  avg() {}
 }
 
 module.exports = SortedList;

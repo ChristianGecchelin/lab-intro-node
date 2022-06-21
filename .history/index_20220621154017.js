@@ -9,7 +9,6 @@ class SortedList {
     this.items.sort(function (a, b) {
       return a - b;
     });
-    this.length = this.items.length;
   }
 
   get(pos) {
@@ -61,7 +60,7 @@ class SortedList {
         const element = this.items[i];
         sum += element;
       }
-      return (average = sum / this.items.length);
+      average = sum / this.items.length;
     }
   }
 }
